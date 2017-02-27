@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- thrift连接池配置 -->
+<bean id="CinemaSocketPool" class="com.maizuo.thirft.pool.ThriftSocketPool">
+    <property name="serviceAddress">
+     <map>
+       <entry key="192.168.1.63">
+       <value>11006</value>
+       </entry>  
+       <!-- 127.0.0.1  -->   
+     </map>
+    </property>
+    <property name="maxActive" value="1000" />
+    <property name="maxIdle" value="50" />
+    <property name="testWhileIdle" value="true" />
+    <property name="conTimeOut" value="10000" />
+</bean>
+</beans>
